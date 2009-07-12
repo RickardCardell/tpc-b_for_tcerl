@@ -165,7 +165,7 @@
 
 -define(tc_cfg_history, [  { deflate, true },
                             { async_write, false },
-                            { bucket_array_size, 10000000}, 
+                            { bucket_array_size, 100000}, 
                             { bloom, 2 bsl 32, 7 }]).
 
 -define(tc_cfg_account,  [  { deflate, true },
@@ -199,7 +199,7 @@
                             { user_properties, 
 			      
 			      begin 
-				  
+				  Extra = read_tc_conf(),
 				  case ?tc_standard of
 				      true ->  ?tc_cfg_standard;
 				      _ -> 
@@ -207,9 +207,9 @@
 					      teller -> ?tc_cfg_teller;
 					      branch -> ?tc_cfg_branch;
 					      account ->
-						  Extra = read_tc_conf(),					      
 						  ?tc_cfg_account++Extra;
-					      tc_cfg_history -> ?tc_cfg_history ++ Extra;
+					      tc_cfg_history -> 
+						  ?tc_cfg_history ++ Extra;
 					      _ -> ?tc_cfg_default
 					  end 
 				  end
