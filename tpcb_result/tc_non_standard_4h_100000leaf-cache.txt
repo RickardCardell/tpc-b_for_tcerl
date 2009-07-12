@@ -1,0 +1,141 @@
+unfairness
+TPC-B: 139 iter +48 diff 2109 (2074) tps 474 avg micros 2950214 max micros 1.0 unfairness
+TPC-B: 140 iter -69 diff 2040 (2012) tps 490 avg micros 4367379 max micros 1.0 unfairness
+TPC-B: 141 iter -20 diff 2020 (1992) tps 495 avg micros 7789419 max micros 1.0 unfairness
+TPC-B: 142 iter +98 diff 2118 (2087) tps 472 avg micros 2828486 max micros 1.0 unfairness
+TPC-B: 143 iter -44 diff 2074 (2044) tps 482 avg micros 3318855 max micros 1.0 unfairness
+TPC-B: 144 iter +13 diff 2087 (2057) tps 479 avg micros 3424371 max micros 1.0 unfairness
+TPC-B: 145 iter -43 diff 2044 (2016) tps 489 avg micros 3770476 max micros 1.0 unfairness
+TPC-B: 146 iter +178 diff 2222 (2183) tps 450 avg micros 3174776 max micros 1.0 unfairness
+TPC-B: 147 iter -214 diff 2008 (1980) tps 498 avg micros 3981445 max micros 1.0 unfairness
+TPC-B: 148 iter -24 diff 1984 (1953) tps 504 avg micros 4018609 max micros 1.0 unfairness
+TPC-B: 149 iter +24 diff 2008 (1976) tps 498 avg micros 4308782 max micros 1.0 unfairness
+TPC-B: 150 iter +180 diff 2188 (2155) tps 457 avg micros 4294660 max micros 1.0 unfairness
+TPC-B: 151 iter -204 diff 1984 (1953) tps 504 avg micros 4283073 max micros 1.0 unfairness
+TPC-B: 152 iter -20 diff 1964 (1934) tps 509 avg micros 4451251 max micros 1.0 unfairness
+TPC-B: 153 iter +40 diff 2004 (1976) tps 499 avg micros 4348418 max micros 1.0 unfairness
+TPC-B: 154 iter +179 diff 2183 (2145) tps 458 avg micros 4394806 max micros 1.0 unfairness
+TPC-B: 155 iter -203 diff 1980 (1953) tps 505 avg micros 4348391 max micros 1.0 unfairness
+TPC-B: 156 iter +8 diff 1988 (1956) tps 503 avg micros 4610490 max micros 1.0 unfairness
+TPC-B: 157 iter -24 diff 1964 (1937) tps 509 avg micros 4537901 max micros 1.0 unfairness
+TPC-B: 158 iter +258 diff 2222 (2183) tps 450 avg micros 3171455 max micros 1.0 unfairness
+TPC-B: 159 iter -273 diff 1949 (1919) tps 513 avg micros 6362466 max micros 1.0 unfairness
+TPC-B: 160 iter +108 diff 2057 (2028) tps 486 avg micros 3574584 max micros 1.0 unfairness
+TPC-B: 161 iter -17 diff 2040 (2008) tps 490 avg micros 3979743 max micros 1.0 unfairness
+TPC-B: 162 iter +177 diff 2217 (2183) tps 451 avg micros 3429663 max micros 1.0 unfairness
+TPC-B: 163 iter -112 diff 2105 (2070) tps 475 avg micros 3141618 max micros 1.0 unfairness
+TPC-B: 164 iter -61 diff 2044 (2012) tps 489 avg micros 3569478 max micros 1.0 unfairness
+TPC-B: 165 iter +56 diff 2100 (2066) tps 476 avg micros 3136762 max micros 1.0 unfairness
+TPC-B: 166 iter -64 diff 2036 (2004) tps 491 avg micros 3708102 max micros 1.0 unfairness
+TPC-B: 167 iter +201 diff 2237 (2202) tps 447 avg micros 2952391 max micros 1.0 unfairness
+TPC-B: 168 iter -340 diff 1897 (1869) tps 527 avg micros 7337413 max micros 1.0 unfairness
+TPC-B: 169 iter +139 diff 2036 (2008) tps 491 avg micros 3794420 max micros 1.0 unfairness
+TPC-B: 170 iter -40 diff 1996 (1968) tps 501 avg micros 4794219 max micros 1.0 unfairness
+TPC-B: 171 iter +236 diff 2232 (2197) tps 448 avg micros 3278989 max micros 1.0 unfairness
+TPC-B: 172 iter -192 diff 2040 (2008) tps 490 avg micros 3633355 max micros 1.0 unfairness
+TPC-B: 173 iter -20 diff 2020 (1988) tps 495 avg micros 4219255 max micros 1.0 unfairness
+TPC-B: 174 iter +16 diff 2036 (2008) tps 491 avg micros 3897598 max micros 1.0 unfairness
+TPC-B: 175 iter +152 diff 2188 (2150) tps 457 avg micros 3863712 max micros 1.0 unfairness
+TPC-B: 176 iter -122 diff 2066 (2036) tps 484 avg micros 3523887 max micros 1.0 unfairness
+TPC-B: 177 iter -17 diff 2049 (2016) tps 488 avg micros 3687179 max micros 1.0 unfairness
+TPC-B: 178 iter +38 diff 2087 (2057) tps 479 avg micros 3283983 max micros 1.0 unfairness
+TPC-B: 179 iter -51 diff 2036 (2004) tps 491 avg micros 4214850 max micros 1.0 unfairness
+TPC-B: 180 iter +166 diff 2202 (2164) tps 454 avg micros 3860228 max micros 1.0 unfairness
+TPC-B: 181 iter -218 diff 1984 (1956) tps 504 avg micros 4556645 max micros 1.0 unfairness
+TPC-B: 182 iter +20 diff 2004 (1976) tps 499 avg micros 4498740 max micros 1.0 unfairness
+TPC-B: 183 iter -20 diff 1984 (1953) tps 504 avg micros 4980135 max micros 1.0 unfairness
+TPC-B: 184 iter +185 diff 2169 (2136) tps 461 avg micros 4422561 max micros 1.0 unfairness
+TPC-B: 185 iter -265 diff 1904 (1876) tps 525 avg micros 5227000 max micros 1.0 unfairness
+TPC-B: 186 iter +19 diff 1923 (1893) tps 520 avg micros 5236205 max micros 1.0 unfairness
+TPC-B: 187 iter +236 diff 2159 (2127) tps 463 avg micros 4465266 max micros 1.0 unfairness
+TPC-B: 188 iter -255 diff 1904 (1879) tps 525 avg micros 5499343 max micros 1.0 unfairness
+TPC-B: 189 iter +30 diff 1934 (1904) tps 517 avg micros 4910621 max micros 1.0 unfairness
+TPC-B: 190 iter -48 diff 1886 (1862) tps 530 avg micros 6210638 max micros 1.0 unfairness
+TPC-B: 191 iter +259 diff 2145 (2114) tps 466 avg micros 5168451 max micros 1.0 unfairness
+TPC-B: 192 iter -219 diff 1926 (1901) tps 519 avg micros 5038560 max micros 1.0 unfairness
+TPC-B: 193 iter +15 diff 1941 (1915) tps 515 avg micros 4810970 max micros 1.0 unfairness
+TPC-B: 194 iter +228 diff 2169 (2136) tps 461 avg micros 4059374 max micros 1.0 unfairness
+TPC-B: 195 iter -157 diff 2012 (1984) tps 497 avg micros 4219386 max micros 1.0 unfairness
+TPC-B: 196 iter -28 diff 1984 (1953) tps 504 avg micros 4283257 max micros 1.0 unfairness
+TPC-B: 197 iter +40 diff 2024 (1996) tps 494 avg micros 3737485 max micros 1.0 unfairness
+TPC-B: 198 iter +103 diff 2127 (2096) tps 470 avg micros 5542281 max micros 1.0 unfairness
+TPC-B: 199 iter -143 diff 1984 (1956) tps 504 avg micros 4562747 max micros 1.0 unfairness
+TPC-B: 200 iter -39 diff 1945 (1919) tps 514 avg micros 4815521 max micros 1.0 unfairness
+TPC-B: 201 iter +43 diff 1988 (1960) tps 503 avg micros 4555834 max micros 1.0 unfairness
+TPC-B: 202 iter +167 diff 2155 (2123) tps 464 avg micros 4438451 max micros 1.0 unfairness
+TPC-B: 203 iter -221 diff 1934 (1904) tps 517 avg micros 4761911 max micros 1.0 unfairness
+TPC-B: 204 iter +54 diff 1988 (1960) tps 503 avg micros 4425864 max micros 1.0 unfairness
+TPC-B: 205 iter -43 diff 1945 (1915) tps 514 avg micros 4944429 max micros 1.0 unfairness
+TPC-B: 206 iter +238 diff 2183 (2150) tps 458 avg micros 4075426 max micros 1.0 unfairness
+TPC-B: 207 iter -290 diff 1893 (1869) tps 528 avg micros 5687285 max micros 1.0 unfairness
+TPC-B: 208 iter +60 diff 1953 (1923) tps 512 avg micros 4715574 max micros 1.0 unfairness
+TPC-B: 209 iter +161 diff 2114 (2079) tps 473 avg micros 5658649 max micros 1.0 unfairness
+TPC-B: 210 iter -206 diff 1908 (1883) tps 524 avg micros 5881914 max micros 1.0 unfairness
+TPC-B: 211 iter +72 diff 1980 (1953) tps 505 avg micros 4291538 max micros 1.0 unfairness
+TPC-B: 212 iter +8 diff 1988 (1960) tps 503 avg micros 4539451 max micros 1.0 unfairness
+TPC-B: 213 iter +195 diff 2183 (2150) tps 458 avg micros 4117573 max micros 1.0 unfairness
+TPC-B: 214 iter -246 diff 1937 (1908) tps 516 avg micros 5042248 max micros 1.0 unfairness
+TPC-B: 215 iter +31 diff 1968 (1937) tps 508 avg micros 4432927 max micros 1.0 unfairness
+TPC-B: 216 iter -8 diff 1960 (1934) tps 510 avg micros 4815072 max micros 1.0 unfairness
+TPC-B: 217 iter +232 diff 2192 (2159) tps 456 avg micros 3868885 max micros 1.0 unfairness
+TPC-B: 218 iter -262 diff 1930 (1904) tps 518 avg micros 4850146 max micros 1.0 unfairness
+TPC-B: 219 iter -47 diff 1883 (1858) tps 531 avg micros 6351715 max micros 1.0 unfairness
+TPC-B: 220 iter +258 diff 2141 (2109) tps 467 avg micros 5084638 max micros 1.0 unfairness
+TPC-B: 221 iter -222 diff 1919 (1890) tps 521 avg micros 5455799 max micros 1.0 unfairness
+TPC-B: 222 iter +41 diff 1960 (1934) tps 510 avg micros 4702275 max micros 1.0 unfairness
+TPC-B: 223 iter +72 diff 2032 (2000) tps 492 avg micros 7248544 max micros 1.0 unfairness
+TPC-B: 224 iter -87 diff 1945 (1915) tps 514 avg micros 5244924 max micros 1.0 unfairness
+TPC-B: 225 iter -90 diff 1855 (1828) tps 539 avg micros 6228697 max micros 1.0 unfairness
+TPC-B: 226 iter +57 diff 1912 (1886) tps 523 avg micros 5913302 max micros 1.0 unfairness
+TPC-B: 227 iter +184 diff 2096 (2061) tps 477 avg micros 5929538 max micros 1.0 unfairness
+TPC-B: 228 iter -206 diff 1890 (1862) tps 529 avg micros 5503641 max micros 1.0 unfairness
+TPC-B: 229 iter +22 diff 1912 (1886) tps 523 avg micros 5468031 max micros 1.0 unfairness
+TPC-B: 230 iter +238 diff 2150 (2118) tps 465 avg micros 4907468 max micros 1.0 unfairness
+TPC-B: 231 iter -227 diff 1923 (1893) tps 520 avg micros 4946930 max micros 1.0 unfairness
+TPC-B: 232 iter +3 diff 1926 (1897) tps 519 avg micros 5125589 max micros 1.0 unfairness
+TPC-B: 233 iter +38 diff 1964 (1937) tps 509 avg micros 4845414 max micros 1.0 unfairness
+TPC-B: 234 iter +168 diff 2132 (2100) tps 469 avg micros 5392550 max micros 1.0 unfairness
+TPC-B: 235 iter -191 diff 1941 (1912) tps 515 avg micros 4822943 max micros 1.0 unfairness
+TPC-B: 236 iter -48 diff 1893 (1869) tps 528 avg micros 5575389 max micros 1.0 unfairness
+TPC-B: 237 iter +262 diff 2155 (2118) tps 464 avg micros 4823074 max micros 1.0 unfairness
+
+=ERROR REPORT==== 10-Jul-2009::23:00:02 ===
+Mnesia(bench2@sillhaj): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                             write_threshold}
+TPC-B: 238 iter -276 diff 1879 (1855) tps 532 avg micros 5561393 max micros 1.0 unfairness
+TPC-B: 239 iter +18 diff 1897 (1872) tps 527 avg micros 5052671 max micros 1.0 unfairness
+TPC-B: Driver 1 (<0.616.0>) on node bench2@sillhaj stopped: {time,30911956,30857461,30857461,14167854909,7789419}
+TPC-B: 239 iter +428 diff 2325 (2277) tps 430 avg micros 146342 max micros 1.0 unfairness
+TPC-B: 2183 (2150) transactions per second, duration of longest transaction was 7789 milliseconds
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+
+=INFO REPORT==== 10-Jul-2009::23:02:46 ===
+    application: mnesia
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 10-Jul-2009::23:02:46 ===
+    application: tcerl
+    exited: stopped
+    type: temporary
+{ok,{time,30911956,54495,139963,14167854909,7789419}}
+(bench2@sillhaj)2> memory().
+[{total,13476324592},
+ {processes,1435288},
+ {processes_used,1395792},
+ {system,13474889304},
+ {atom,618353},
+ {atom_used,592861},
+ {binary,32256},
+ {code,6311143},
+ {ets,351688}]
+(bench2@sillhaj)3>
+
+
+%{ leaf_node_cache, 100000}.  
+%  %{ nonleaf_node_cache, }. default
+%{deflate, true}.
+
+annars standard.

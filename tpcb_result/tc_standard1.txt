@@ -1,0 +1,94 @@
+14> mnesia_tpcb:start().
+TPC-B: Table config: [{db_nodes,[nonode@nohost]},
+                      {n_replicas,1},
+                      {replica_nodes,[nonode@nohost]},
+                      {replica_type,external_copies},
+                      {use_running_mnesia,false},
+                      {n_fragments,0},
+                      {n_branches,1},
+                      {n_tellers_per_branch,10},
+                      {n_accounts_per_branch,100000},
+                      {branch_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"},
+                      {account_filler,[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,
+                                       16,17,18,19,20,21,22,23,24,25,26,27,28,
+                                       29,30,31,32,33,34,35,36,37,38,39,40,41,
+                                       42,43,44,45,46,47,48,49,50,51,52,53,54,
+                                       55,56,57,58,59,60,61,62,63,64,65,66,67,
+                                       68,69,70,71,72,73,74,75,76,77,78,79,80,
+                                       81,82,83,84,85,86,87,88,89,90,91,92,93,
+                                       94,95,96,97,98,99]},
+                      {teller_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"}] 
+
+=INFO REPORT==== 29-Jun-2009::15:27:11 ===
+    application: mnesia
+    exited: killed
+    type: temporary
+TPC-B: Generating 1 branches a 119 bytes
+TPC-B: Generating 1 * 10 tellers a 121 bytes
+TPC-B: Generating 1 * 100000 accounts a 122 bytes
+TPC-B: Generating 0 history records a 51 bytes
+
+=ERROR REPORT==== 29-Jun-2009::15:27:12 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+
+=ERROR REPORT==== 29-Jun-2009::15:27:16 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+
+=ERROR REPORT==== 29-Jun-2009::15:27:16 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+
+=ERROR REPORT==== 29-Jun-2009::15:27:17 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+TPC-B: Run config: [{driver_nodes,[nonode@nohost]},
+                    {n_drivers_per_node,1},
+                    {use_running_mnesia,false},
+                    {stop_after,900000},
+                    {report_interval,60000},
+                    {use_sticky_locks,false},
+                    {spawn_near_branch,false},
+                    {activity_type,transaction},
+                    {reuse_history_id,false}] 
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+TPC-B: Orphan branches: []
+TPC-B: Driver 1 started as <0.2336.0> on node nonode@nohost with 1 local branches
+TPC-B: 1 iter 0 diff 1919 (1872) tps 521 avg micros 79570 max micros 1.0 unfairness
+TPC-B: 2 iter -18 diff 1901 (1851) tps 526 avg micros 94978 max micros 1.0 unfairness
+TPC-B: 3 iter -4 diff 1897 (1848) tps 527 avg micros 66893 max micros 1.0 unfairness
+TPC-B: 4 iter 0 diff 1897 (1851) tps 527 avg micros 13052 max micros 1.0 unfairness
+TPC-B: 5 iter 0 diff 1897 (1848) tps 527 avg micros 78854 max micros 1.0 unfairness
+TPC-B: 6 iter -11 diff 1886 (1841) tps 530 avg micros 66773 max micros 1.0 unfairness
+TPC-B: 7 iter -7 diff 1879 (1834) tps 532 avg micros 12059 max micros 1.0 unfairness
+TPC-B: 8 iter +4 diff 1883 (1834) tps 531 avg micros 21891 max micros 1.0 unfairness
+TPC-B: 9 iter 0 diff 1883 (1834) tps 531 avg micros 69466 max micros 1.0 unfairness
+TPC-B: 10 iter 0 diff 1883 (1838) tps 531 avg micros 97143 max micros 1.0 unfairness
+TPC-B: 11 iter +10 diff 1893 (1848) tps 528 avg micros 45119 max micros 1.0 unfairness
+TPC-B: 12 iter -14 diff 1879 (1834) tps 532 avg micros 64826 max micros 1.0 unfairness
+TPC-B: 13 iter -3 diff 1876 (1831) tps 533 avg micros 118106 max micros 1.0 unfairness
+TPC-B: 14 iter +3 diff 1879 (1831) tps 532 avg micros 68011 max micros 1.0 unfairness
+TPC-B: Driver 1 (<0.2336.0>) on node nonode@nohost stopped: {time,1649392,1546726,1546726,873755338,118106}
+TPC-B: 14 iter 0 diff 1879 (1831) tps 532 avg micros 14130 max micros 1.0 unfairness
+TPC-B: 1890 (1841) transactions per second, duration of longest transaction was 118 milliseconds
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+
+=INFO REPORT==== 29-Jun-2009::15:42:26 ===
+    application: mnesia
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 29-Jun-2009::15:42:26 ===
+    application: tcerl
+    exited: stopped
+    type: temporary
+{ok,{time,1649392,102666,112154,873755338,118106}}
+

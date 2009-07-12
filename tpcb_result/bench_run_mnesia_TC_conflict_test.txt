@@ -1,0 +1,33 @@
+Eshell V5.6.5  (abort with ^G)
+1> TPC-B: Table config: [{db_nodes,[nonode@nohost]},
+                      {n_replicas,1},
+                      {replica_nodes,[nonode@nohost]},
+                      {replica_type,external_copies},
+                      {use_running_mnesia,false},
+                      {n_fragments,0},
+                      {n_branches,1},
+                      {n_tellers_per_branch,10},
+                      {n_accounts_per_branch,10},
+                      {branch_filler,{123456789012345678901234567890123456789012345678901234567890,
+                                      123456789012345678901234567890123456789012345678901234567890,
+                                      123456789012345678901234567890123456789012345678901234567890}},
+                      {account_filler,{123456789012345678901234567890123456789012345678901234567890,
+                                       123456789012345678901234567890123456789012345678901234567890,
+                                       123456789012345678901234567890123456789012345678901234}},
+                      {teller_filler,{123456789012345678901234567890123456789012345678901234567890,
+                                      123456789012345678901234567890123456789012345678901234567890,
+                                      1234567890123456789012345678901234567890123456789012345678}}] 
+1> 
+=INFO REPORT==== 21-May-2009::22:38:45 ===
+    application: tcerl
+    exited: stopped
+    type: temporary
+1> TPC-B: <ERROR> failed to create table branch [{external_copies,[nonode@nohost]},{attributes,[id,balance,filler]}]: {noproc,
+                                                                                                                    {gen_server,
+                                                                                                                     call,
+                                                                                                                     [tcbdbsrv,
+                                                                                                                      {delete_tab,
+                                                                                                                       branch}]}}
+1> 
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution

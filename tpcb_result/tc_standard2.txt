@@ -1,0 +1,190 @@
+rickard.cardell@sillhaj:~/development/sources/mnesia_bench/TPC-B/TC$ erl +A 128 +S 4Erlang (BEAM) emulator version 5.6.5 [source] [64-bit] [smp:4] [async-threads:128] [hipe] [kernel-poll:false]
+
+Eshell V5.6.5  (abort with ^G)
+1> go:start().
+Dir "/usr" 
+TPC-B: Table config: [{db_nodes,[nonode@nohost]},
+                      {n_replicas,1},
+                      {replica_nodes,[nonode@nohost]},
+                      {replica_type,external_copies},
+                      {use_running_mnesia,false},
+                      {n_fragments,0},
+                      {n_branches,1},
+                      {n_tellers_per_branch,10},
+                      {n_accounts_per_branch,100000},
+                      {branch_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"},
+                      {account_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"},
+                      {teller_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"}] 
+TPC-B: Generating 1 branches a 119 bytes
+TPC-B: Generating 1 * 10 tellers a 121 bytes
+TPC-B: Generating 1 * 100000 accounts a 122 bytes
+TPC-B: Generating 0 history records a 51 bytes
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+TPC-B: Run config: [{driver_nodes,[nonode@nohost]},
+                    {n_drivers_per_node,1},
+                    {use_running_mnesia,false},
+                    {stop_after,7200000},
+                    {report_interval,60000},
+                    {use_sticky_locks,false},
+                    {spawn_near_branch,false},
+                    {activity_type,transaction},
+                    {reuse_history_id,false}] 
+Tokyocabinet cfg: 
+ branch: [{deflate,false},
+          {async_write,false},
+          {bucket_array_size,2},
+          {bloom,128,7}] 
+ teller: [{deflate,false},
+          {async_write,false},
+          {bucket_array_size,20},
+          {bloom,128,7}] 
+ account: [{deflate,false},
+           {async_write,false},
+           {bucket_array_size,200000},
+           {bloom,781,7}] 
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+TPC-B: Orphan branches: []
+TPC-B: Driver 1 started as <0.610.0> on node nonode@nohost with 1 local branches
+TPC-B: 1 iter 0 diff 1499 (1466) tps 667 avg micros 13634 max micros 1.0 unfairness
+TPC-B: 2 iter -18 diff 1481 (1451) tps 675 avg micros 95884 max micros 1.0 unfairness
+TPC-B: 3 iter 0 diff 1481 (1451) tps 675 avg micros 97727 max micros 1.0 unfairness
+TPC-B: 4 iter -26 diff 1455 (1426) tps 687 avg micros 124686 max micros 1.0 unfairness
+TPC-B: 5 iter +2 diff 1457 (1428) tps 686 avg micros 123235 max micros 1.0 unfairness
+TPC-B: 6 iter +15 diff 1472 (1440) tps 679 avg micros 112388 max micros 1.0 unfairness
+TPC-B: 7 iter -2 diff 1470 (1440) tps 680 avg micros 122570 max micros 1.0 unfairness
+TPC-B: 8 iter -4 diff 1466 (1436) tps 682 avg micros 129076 max micros 1.0 unfairness
+TPC-B: 9 iter -21 diff 1445 (1414) tps 692 avg micros 114016 max micros 1.0 unfairness
+TPC-B: 10 iter 0 diff 1445 (1414) tps 692 avg micros 110844 max micros 1.0 unfairness
+TPC-B: 11 iter +10 diff 1455 (1424) tps 687 avg micros 117408 max micros 1.0 unfairness
+TPC-B: 12 iter -6 diff 1449 (1420) tps 690 avg micros 118839 max micros 1.0 unfairness
+TPC-B: 13 iter +17 diff 1466 (1436) tps 682 avg micros 111035 max micros 1.0 unfairness
+TPC-B: 14 iter -11 diff 1455 (1426) tps 687 avg micros 133459 max micros 1.0 unfairness
+TPC-B: 15 iter +22 diff 1477 (1447) tps 677 avg micros 123751 max micros 1.0 unfairness
+TPC-B: 16 iter -26 diff 1451 (1420) tps 689 avg micros 127767 max micros 1.0 unfairness
+TPC-B: 17 iter -4 diff 1447 (1418) tps 691 avg micros 122381 max micros 1.0 unfairness
+TPC-B: 18 iter +19 diff 1466 (1436) tps 682 avg micros 126294 max micros 1.0 unfairness
+TPC-B: 19 iter -2 diff 1464 (1432) tps 683 avg micros 131646 max micros 1.0 unfairness
+TPC-B: 20 iter 0 diff 1464 (1432) tps 683 avg micros 123317 max micros 1.0 unfairness
+TPC-B: 21 iter -5 diff 1459 (1430) tps 685 avg micros 121863 max micros 1.0 unfairness
+TPC-B: 22 iter -8 diff 1451 (1422) tps 689 avg micros 133706 max micros 1.0 unfairness
+TPC-B: 23 iter -6 diff 1445 (1416) tps 692 avg micros 132013 max micros 1.0 unfairness
+TPC-B: 24 iter +16 diff 1461 (1430) tps 684 avg micros 125119 max micros 1.0 unfairness
+TPC-B: 25 iter -6 diff 1455 (1424) tps 687 avg micros 129056 max micros 1.0 unfairness
+TPC-B: 26 iter -2 diff 1453 (1424) tps 688 avg micros 128554 max micros 1.0 unfairness
+TPC-B: 27 iter +6 diff 1459 (1428) tps 685 avg micros 127216 max micros 1.0 unfairness
+TPC-B: 28 iter -8 diff 1451 (1422) tps 689 avg micros 128308 max micros 1.0 unfairness
+TPC-B: 29 iter -4 diff 1447 (1418) tps 691 avg micros 125976 max micros 1.0 unfairness
+TPC-B: 30 iter +14 diff 1461 (1432) tps 684 avg micros 113248 max micros 1.0 unfairness
+TPC-B: 31 iter +16 diff 1477 (1447) tps 677 avg micros 132479 max micros 1.0 unfairness
+TPC-B: 32 iter -18 diff 1459 (1428) tps 685 avg micros 125321 max micros 1.0 unfairness
+TPC-B: 33 iter -6 diff 1453 (1422) tps 688 avg micros 122906 max micros 1.0 unfairness
+TPC-B: 34 iter +6 diff 1459 (1428) tps 685 avg micros 132103 max micros 1.0 unfairness
+TPC-B: 35 iter +18 diff 1477 (1447) tps 677 avg micros 110643 max micros 1.0 unfairness
+TPC-B: 36 iter -34 diff 1443 (1412) tps 693 avg micros 128454 max micros 1.0 unfairness
+TPC-B: 37 iter +8 diff 1451 (1420) tps 689 avg micros 130069 max micros 1.0 unfairness
+TPC-B: 38 iter +6 diff 1457 (1426) tps 686 avg micros 119958 max micros 1.0 unfairness
+TPC-B: 39 iter 0 diff 1457 (1428) tps 686 avg micros 130116 max micros 1.0 unfairness
+TPC-B: 40 iter -10 diff 1447 (1416) tps 691 avg micros 123773 max micros 1.0 unfairness
+TPC-B: 41 iter +10 diff 1457 (1426) tps 686 avg micros 126288 max micros 1.0 unfairness
+TPC-B: 42 iter +7 diff 1464 (1434) tps 683 avg micros 124986 max micros 1.0 unfairness
+TPC-B: 43 iter +10 diff 1474 (1445) tps 678 avg micros 123473 max micros 1.0 unfairness
+TPC-B: 44 iter -13 diff 1461 (1432) tps 684 avg micros 134904 max micros 1.0 unfairness
+TPC-B: 45 iter -31 diff 1430 (1400) tps 699 avg micros 129019 max micros 1.0 unfairness
+TPC-B: 46 iter +38 diff 1468 (1438) tps 681 avg micros 122909 max micros 1.0 unfairness
+TPC-B: 47 iter +9 diff 1477 (1447) tps 677 avg micros 116512 max micros 1.0 unfairness
+TPC-B: 48 iter -13 diff 1464 (1432) tps 683 avg micros 132520 max micros 1.0 unfairness
+TPC-B: 49 iter -19 diff 1445 (1416) tps 692 avg micros 111670 max micros 1.0 unfairness
+TPC-B: 50 iter +19 diff 1464 (1434) tps 683 avg micros 131641 max micros 1.0 unfairness
+TPC-B: 51 iter -21 diff 1443 (1414) tps 693 avg micros 134439 max micros 1.0 unfairness
+TPC-B: 52 iter +2 diff 1445 (1414) tps 692 avg micros 117445 max micros 1.0 unfairness
+TPC-B: 53 iter +25 diff 1470 (1440) tps 680 avg micros 129763 max micros 1.0 unfairness
+TPC-B: 54 iter -25 diff 1445 (1414) tps 692 avg micros 129025 max micros 1.0 unfairness
+TPC-B: 55 iter +10 diff 1455 (1426) tps 687 avg micros 131184 max micros 1.0 unfairness
+TPC-B: 56 iter -8 diff 1447 (1416) tps 691 avg micros 142793 max micros 1.0 unfairness
+TPC-B: 57 iter -7 diff 1440 (1410) tps 694 avg micros 127884 max micros 1.0 unfairness
+TPC-B: 58 iter +3 diff 1443 (1412) tps 693 avg micros 126101 max micros 1.0 unfairness
+TPC-B: 59 iter -5 diff 1438 (1408) tps 695 avg micros 128084 max micros 1.0 unfairness
+TPC-B: 60 iter +7 diff 1445 (1414) tps 692 avg micros 111597 max micros 1.0 unfairness
+TPC-B: 61 iter +19 diff 1464 (1432) tps 683 avg micros 127008 max micros 1.0 unfairness
+TPC-B: 62 iter +2 diff 1466 (1434) tps 682 avg micros 129929 max micros 1.0 unfairness
+TPC-B: 63 iter +6 diff 1472 (1440) tps 679 avg micros 122716 max micros 1.0 unfairness
+TPC-B: 64 iter +7 diff 1479 (1447) tps 676 avg micros 139730 max micros 1.0 unfairness
+TPC-B: 65 iter -22 diff 1457 (1426) tps 686 avg micros 126117 max micros 1.0 unfairness
+TPC-B: 66 iter +7 diff 1464 (1434) tps 683 avg micros 130409 max micros 1.0 unfairness
+TPC-B: 67 iter +8 diff 1472 (1443) tps 679 avg micros 126062 max micros 1.0 unfairness
+TPC-B: 68 iter -17 diff 1455 (1424) tps 687 avg micros 127444 max micros 1.0 unfairness
+TPC-B: 69 iter +6 diff 1461 (1432) tps 684 avg micros 126044 max micros 1.0 unfairness
+TPC-B: 70 iter +5 diff 1466 (1434) tps 682 avg micros 119247 max micros 1.0 unfairness
+TPC-B: 71 iter -7 diff 1459 (1428) tps 685 avg micros 132423 max micros 1.0 unfairness
+TPC-B: 72 iter +2 diff 1461 (1430) tps 684 avg micros 112176 max micros 1.0 unfairness
+TPC-B: 73 iter +18 diff 1479 (1447) tps 676 avg micros 132253 max micros 1.0 unfairness
+TPC-B: 74 iter +2 diff 1481 (1449) tps 675 avg micros 143237 max micros 1.0 unfairness
+TPC-B: 75 iter -11 diff 1470 (1438) tps 680 avg micros 125074 max micros 1.0 unfairness
+TPC-B: 76 iter +13 diff 1483 (1453) tps 674 avg micros 122099 max micros 1.0 unfairness
+TPC-B: 77 iter -4 diff 1479 (1449) tps 676 avg micros 117725 max micros 1.0 unfairness
+TPC-B: 78 iter +22 diff 1501 (1470) tps 666 avg micros 125078 max micros 1.0 unfairness
+TPC-B: 79 iter -24 diff 1477 (1445) tps 677 avg micros 121006 max micros 1.0 unfairness
+TPC-B: 80 iter -18 diff 1459 (1428) tps 685 avg micros 125894 max micros 1.0 unfairness
+TPC-B: 81 iter +9 diff 1468 (1436) tps 681 avg micros 126442 max micros 1.0 unfairness
+TPC-B: 82 iter +2 diff 1470 (1440) tps 680 avg micros 133643 max micros 1.0 unfairness
+TPC-B: 83 iter -2 diff 1468 (1436) tps 681 avg micros 116349 max micros 1.0 unfairness
+TPC-B: 84 iter +2 diff 1470 (1438) tps 680 avg micros 114657 max micros 1.0 unfairness
+TPC-B: 85 iter +2 diff 1472 (1440) tps 679 avg micros 129485 max micros 1.0 unfairness
+TPC-B: 86 iter -4 diff 1468 (1438) tps 681 avg micros 127178 max micros 1.0 unfairness
+TPC-B: 87 iter +2 diff 1470 (1440) tps 680 avg micros 132658 max micros 1.0 unfairness
+TPC-B: 88 iter +2 diff 1472 (1440) tps 679 avg micros 137272 max micros 1.0 unfairness
+TPC-B: 89 iter +2 diff 1474 (1443) tps 678 avg micros 112878 max micros 1.0 unfairness
+TPC-B: 90 iter -4 diff 1470 (1438) tps 680 avg micros 125041 max micros 1.0 unfairness
+TPC-B: 91 iter +2 diff 1472 (1440) tps 679 avg micros 122201 max micros 1.0 unfairness
+TPC-B: 92 iter -4 diff 1468 (1436) tps 681 avg micros 125400 max micros 1.0 unfairness
+TPC-B: 93 iter -7 diff 1461 (1432) tps 684 avg micros 123608 max micros 1.0 unfairness
+TPC-B: 94 iter -2 diff 1459 (1428) tps 685 avg micros 133435 max micros 1.0 unfairness
+TPC-B: 95 iter +5 diff 1464 (1432) tps 683 avg micros 125874 max micros 1.0 unfairness
+TPC-B: 96 iter +26 diff 1490 (1457) tps 671 avg micros 118043 max micros 1.0 unfairness
+TPC-B: 97 iter -11 diff 1479 (1447) tps 676 avg micros 122911 max micros 1.0 unfairness
+TPC-B: 98 iter -15 diff 1464 (1434) tps 683 avg micros 119297 max micros 1.0 unfairness
+TPC-B: 99 iter +2 diff 1466 (1434) tps 682 avg micros 138823 max micros 1.0 unfairness
+TPC-B: 100 iter -11 diff 1455 (1424) tps 687 avg micros 128908 max micros 1.0 unfairness
+TPC-B: 101 iter +22 diff 1477 (1447) tps 677 avg micros 124083 max micros 1.0 unfairness
+TPC-B: 102 iter -3 diff 1474 (1443) tps 678 avg micros 110627 max micros 1.0 unfairness
+TPC-B: 103 iter -4 diff 1470 (1440) tps 680 avg micros 117866 max micros 1.0 unfairness
+TPC-B: 104 iter -4 diff 1466 (1436) tps 682 avg micros 138760 max micros 1.0 unfairness
+TPC-B: 105 iter +11 diff 1477 (1447) tps 677 avg micros 132550 max micros 1.0 unfairness
+TPC-B: 106 iter -13 diff 1464 (1434) tps 683 avg micros 120631 max micros 1.0 unfairness
+TPC-B: 107 iter -19 diff 1445 (1416) tps 692 avg micros 125588 max micros 1.0 unfairness
+TPC-B: 108 iter +38 diff 1483 (1453) tps 674 avg micros 114936 max micros 1.0 unfairness
+TPC-B: 109 iter -34 diff 1449 (1418) tps 690 avg micros 143381 max micros 1.0 unfairness
+TPC-B: 110 iter -2 diff 1447 (1418) tps 691 avg micros 124127 max micros 1.0 unfairness
+TPC-B: 111 iter +10 diff 1457 (1428) tps 686 avg micros 133416 max micros 1.0 unfairness
+TPC-B: 112 iter -6 diff 1451 (1420) tps 689 avg micros 128886 max micros 1.0 unfairness
+TPC-B: 113 iter +2 diff 1453 (1422) tps 688 avg micros 128413 max micros 1.0 unfairness
+TPC-B: 114 iter +11 diff 1464 (1432) tps 683 avg micros 107390 max micros 1.0 unfairness
+TPC-B: 115 iter -24 diff 1440 (1410) tps 694 avg micros 124530 max micros 1.0 unfairness
+TPC-B: 116 iter +15 diff 1455 (1426) tps 687 avg micros 123565 max micros 1.0 unfairness
+TPC-B: 117 iter +11 diff 1466 (1434) tps 682 avg micros 138903 max micros 1.0 unfairness
+TPC-B: 118 iter -7 diff 1459 (1430) tps 685 avg micros 128241 max micros 1.0 unfairness
+TPC-B: 119 iter +11 diff 1470 (1440) tps 680 avg micros 112897 max micros 1.0 unfairness
+TPC-B: Driver 1 (<0.610.0>) on node nonode@nohost stopped: {time,10293261,10220097,10220097,7041386837,143381}
+TPC-B: 119 iter +7 diff 1477 (1445) tps 677 avg micros 134971 max micros 1.0 unfairness
+TPC-B: 1461 (1432) transactions per second, duration of longest transaction was 143 milliseconds
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+
+=INFO REPORT==== 30-Jun-2009::00:13:00 ===
+    application: mnesia
+    exited: stopped
+    type: temporary
+{ok,{time,10293261,73164,88154,7041386837,143381}}
+
+=INFO REPORT==== 30-Jun-2009::00:13:00 ===
+    application: tcerl
+    exited: stopped
+    type: temporary
+2> 
+
+

@@ -1,0 +1,109 @@
+rickard.cardell@sillhaj:~/development/sources/mnesia_bench/TPC-B/TC$ erl
+Erlang (BEAM) emulator version 5.6.5 [source] [64-bit] [smp:4] [async-threads:0] [hipe] [kernel-poll:false]
+
+Eshell V5.6.5  (abort with ^G)
+1> go:start().
+Dir "/usr" 
+TPC-B: Table config: [{db_nodes,[nonode@nohost]},
+                      {n_replicas,1},
+                      {replica_nodes,[nonode@nohost]},
+                      {replica_type,external_copies},
+                      {use_running_mnesia,false},
+                      {n_fragments,0},
+                      {n_branches,1},
+                      {n_tellers_per_branch,10},
+                      {n_accounts_per_branch,100000},
+                      {branch_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"},
+                      {account_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"},
+                      {teller_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"}] 
+TPC-B: Generating 1 branches a 119 bytes
+TPC-B: Generating 1 * 10 tellers a 121 bytes
+TPC-B: Generating 1 * 100000 accounts a 122 bytes
+TPC-B: Generating 0 history records a 51 bytes
+
+=ERROR REPORT==== 30-Jun-2009::10:45:05 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+
+=ERROR REPORT==== 30-Jun-2009::10:45:08 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+
+=ERROR REPORT==== 30-Jun-2009::10:45:08 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+
+=ERROR REPORT==== 30-Jun-2009::10:45:09 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+
+=ERROR REPORT==== 30-Jun-2009::10:45:09 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+TPC-B: Run config: [{driver_nodes,[nonode@nohost]},
+                    {n_drivers_per_node,1},
+                    {use_running_mnesia,false},
+                    {stop_after,900000},
+                    {report_interval,60000},
+                    {use_sticky_locks,false},
+                    {spawn_near_branch,false},
+                    {activity_type,transaction},
+                    {reuse_history_id,false}] 
+Tokyocabinet cfg: 
+ branch: [{deflate,true},
+          {async_write,false},
+          {bucket_array_size,2},
+          {bloom,128,7}] 
+ teller: [{deflate,true},
+          {async_write,false},
+          {bucket_array_size,20},
+          {bloom,128,7}] 
+ account: [{deflate,true},
+           {async_write,false},
+           {bucket_array_size,200000},
+           {bloom,781,7}] 
+ history: [{deflate,true},
+           {async_write,false},
+           {bucket_array_size,10000000},
+           {bloom,8589934592,7}] 
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+TPC-B: Orphan branches: []
+TPC-B: Driver 1 started as <0.604.0> on node nonode@nohost with 1 local branches
+TPC-B: 1 iter 0 diff 1949 (1897) tps 513 avg micros 26867 max micros 1.0 unfairness
+TPC-B: 2 iter -45 diff 1904 (1855) tps 525 avg micros 50874 max micros 1.0 unfairness
+TPC-B: 3 iter 0 diff 1904 (1858) tps 525 avg micros 12232 max micros 1.0 unfairness
+TPC-B: 4 iter +4 diff 1908 (1858) tps 524 avg micros 101764 max micros 1.0 unfairness
+TPC-B: 5 iter +7 diff 1915 (1865) tps 522 avg micros 91817 max micros 1.0 unfairness
+TPC-B: 6 iter -14 diff 1901 (1855) tps 526 avg micros 13323 max micros 1.0 unfairness
+TPC-B: 7 iter -15 diff 1886 (1841) tps 530 avg micros 51244 max micros 1.0 unfairness
+TPC-B: 8 iter +11 diff 1897 (1851) tps 527 avg micros 33388 max micros 1.0 unfairness
+TPC-B: 9 iter 0 diff 1897 (1851) tps 527 avg micros 99341 max micros 1.0 unfairness
+TPC-B: 10 iter +7 diff 1904 (1855) tps 525 avg micros 88120 max micros 1.0 unfairness
+TPC-B: 11 iter -42 diff 1862 (1814) tps 537 avg micros 86536 max micros 1.0 unfairness
+TPC-B: 12 iter -4 diff 1858 (1811) tps 538 avg micros 85375 max micros 1.0 unfairness
+TPC-B: 13 iter +4 diff 1862 (1814) tps 537 avg micros 75776 max micros 1.0 unfairness
+TPC-B: 14 iter +21 diff 1883 (1834) tps 531 avg micros 88427 max micros 1.0 unfairness
+TPC-B: Driver 1 (<0.604.0>) on node nonode@nohost stopped: {time,1653902,1550610,1550610,873487854,106648}
+TPC-B: 14 iter +7 diff 1890 (1841) tps 529 avg micros 106648 max micros 1.0 unfairness
+TPC-B: 1893 (1848) transactions per second, duration of longest transaction was 106 milliseconds
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+
+=INFO REPORT==== 30-Jun-2009::11:00:18 ===
+    application: mnesia
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 30-Jun-2009::11:00:18 ===
+    application: tcerl
+    exited: stopped
+    type: temporary
+{ok,{time,1653902,103292,113761,873487854,106648}}
+2> 
+

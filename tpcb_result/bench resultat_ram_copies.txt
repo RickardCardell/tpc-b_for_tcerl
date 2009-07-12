@@ -1,0 +1,61 @@
+
+1> mnesia_tpcb:start().
+TPC-B: Table config: [{db_nodes,[nonode@nohost]},
+                      {n_replicas,1},
+                      {replica_nodes,[nonode@nohost]},
+                      {replica_type,ram_copies},
+                      {use_running_mnesia,false},
+                      {n_fragments,0},
+                      {n_branches,1},
+                      {n_tellers_per_branch,10},
+                      {n_accounts_per_branch,100000},
+                      {branch_filler,{123456789012345678901234567890123456789012345678901234567890,
+                                      123456789012345678901234567890123456789012345678901234567890,
+                                      123456789012345678901234567890123456789012345678901234567890}},
+                      {account_filler,{123456789012345678901234567890123456789012345678901234567890,
+                                       123456789012345678901234567890123456789012345678901234567890,
+                                       123456789012345678901234567890123456789012345678901234}},
+                      {teller_filler,{123456789012345678901234567890123456789012345678901234567890,
+                                      123456789012345678901234567890123456789012345678901234567890,
+                                      1234567890123456789012345678901234567890123456789012345678}}]
+TPC-B: Generating 1 branches a 102 bytes
+TPC-B: Generating 1 * 10 tellers a 103 bytes
+TPC-B: Generating 1 * 100000 accounts a 103 bytes
+TPC-B: Generating 0 history records a 51 bytes
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B: Run config: [{driver_nodes,[nonode@nohost]},
+                    {n_drivers_per_node,1},
+                    {use_running_mnesia,false},
+                    {stop_after,900000},
+                    {report_interval,60000},
+                    {use_sticky_locks,false},
+                    {spawn_near_branch,false},
+                    {activity_type,transaction},
+                    {reuse_history_id,false}]
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B: Orphan branches: []
+TPC-B: Driver 1 started as <0.105.0> on node nonode@nohost with 1 local branches
+TPC-B: 1 iter 0 diff 5524 (5291) tps 181 avg micros 1095 max micros 1.0 unfairness
+TPC-B: 2 iter +289 diff 5813 (5555) tps 172 avg micros 1233 max micros 1.0 unfairness
+TPC-B: 3 iter -258 diff 5555 (5319) tps 180 avg micros 948 max micros 1.0 unfairness
+TPC-B: 4 iter 0 diff 5555 (5319) tps 180 avg micros 948 max micros 1.0 unfairness
+TPC-B: 5 iter +62 diff 5617 (5376) tps 178 avg micros 1085 max micros 1.0 unfairness
+TPC-B: 6 iter -62 diff 5555 (5319) tps 180 avg micros 1345 max micros 1.0 unfairness
+TPC-B: 7 iter -31 diff 5524 (5291) tps 181 avg micros 1121 max micros 1.0 unfairness
+TPC-B: 8 iter +323 diff 5847 (5586) tps 171 avg micros 4319 max micros 1.0 unfairness
+TPC-B: 9 iter +250 diff 6097 (5847) tps 164 avg micros 384 max micros 1.0 unfairness
+TPC-B: 10 iter -416 diff 5681 (5434) tps 176 avg micros 5619 max micros 1.0 unfairness
+TPC-B: 11 iter -157 diff 5524 (5291) tps 181 avg micros 1372 max micros 1.0 unfairness
+TPC-B: 12 iter +323 diff 5847 (5586) tps 171 avg micros 4168 max micros 1.0 unfairness
+TPC-B: 13 iter +325 diff 6172 (5882) tps 162 avg micros 357 max micros 1.0 unfairness
+TPC-B: 14 iter -359 diff 5813 (5555) tps 172 avg micros 439 max micros 1.0 unfairness
+TPC-B: Driver 1 (<0.105.0>) on node nonode@nohost stopped: {time,4914937,4584928,4584928,861064637,5619}
+TPC-B: 14 iter 0 diff 5813 (5555) tps 172 avg micros 1198 max micros 1.0 unfairness
+TPC-B: 5714 (5464) transactions per second, duration of longest transaction was 5 milliseconds
+TPC-B: Verifying tables: [branch,teller,account,history]
+
+=INFO REPORT==== 21-May-2009::18:17:34 ===
+    application: mnesia
+    exited: stopped
+    type: temporary
+{ok,{time,4914937,316373,351726,861064637,5619}}

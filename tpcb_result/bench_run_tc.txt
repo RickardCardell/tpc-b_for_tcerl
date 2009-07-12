@@ -1,0 +1,289 @@
+Eshell V5.6.5  (abort with ^G)
+1> TPC-B: Table config: [{db_nodes,[nonode@nohost]},
+                      {n_replicas,1},
+                      {replica_nodes,[nonode@nohost]},
+                      {replica_type,external_copies},
+                      {use_running_mnesia,false},
+                      {n_fragments,0},
+                      {n_branches,1},
+                      {n_tellers_per_branch,10},
+                      {n_accounts_per_branch,100000},
+                      {branch_filler,{123456789012345678901234567890123456789012345678901234567890,
+                                      123456789012345678901234567890123456789012345678901234567890,
+                                      123456789012345678901234567890123456789012345678901234567890}},
+                      {account_filler,{123456789012345678901234567890123456789012345678901234567890,
+                                       123456789012345678901234567890123456789012345678901234567890,
+                                       123456789012345678901234567890123456789012345678901234}},
+                      {teller_filler,{123456789012345678901234567890123456789012345678901234567890,
+                                      123456789012345678901234567890123456789012345678901234567890,
+                                      1234567890123456789012345678901234567890123456789012345678}}] 
+1> TPC-B: Generating 1 branches a 102 bytes
+1> TPC-B: Generating 1 * 10 tellers a 103 bytes
+1> TPC-B: Generating 1 * 100000 accounts a 103 bytes
+1> TPC-B: Generating 0 history records a 51 bytes
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:35 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:35 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:36 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:36 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:36 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:36 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:36 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:36 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:36 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:37 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:37 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:37 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:37 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:37 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:37 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:37 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:37 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:38 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:38 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:38 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:38 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:38 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:39 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:40 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:41 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:41 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::20:49:41 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> TPC-B: Verifying tables: [branch,teller,account,history]
+1> TPC-B:  .. Done loading tables: [branch,teller,account,history]
+1> TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+1> DONE1> Time for teller1> DONE1> Time for account1> DONE1> TPC-B: Run config: [{driver_nodes,[nonode@nohost]},
+                    {n_drivers_per_node,1},
+                    {use_running_mnesia,false},
+                    {stop_after,900000},
+                    {report_interval,60000},
+                    {use_sticky_locks,false},
+                    {spawn_near_branch,false},
+                    {activity_type,transaction},
+                    {reuse_history_id,false}] 
+1> TPC-B: Verifying tables: [branch,teller,account,history]
+1> TPC-B:  .. Done loading tables: [branch,teller,account,history]
+1> TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+1> DONE1> Time for teller1> DONE1> Time for account1> DONE1> TPC-B: Orphan branches: []
+1> TPC-B: Driver 1 started as <0.497.0> on node nonode@nohost with 1 local branches
+1> TPC-B: 1 iter 0 diff 1984 (1953) tps 504 avg micros 35244 max micros 1.0 unfairness
+1> TPC-B: 2 iter -58 diff 1926 (1901) tps 519 avg micros 8871 max micros 1.0 unfairness
+1> 
+=ERROR REPORT==== 21-May-2009::20:52:48 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> TPC-B: 3 iter -22 diff 1904 (1876) tps 525 avg micros 379506 max micros 1.0 unfairness
+1> TPC-B: 4 iter +22 diff 1926 (1901) tps 519 avg micros 11458 max micros 1.0 unfairness
+1> TPC-B: 5 iter +23 diff 1949 (1923) tps 513 avg micros 8096 max micros 1.0 unfairness
+1> TPC-B: 6 iter +4 diff 1953 (1923) tps 512 avg micros 8790 max micros 1.0 unfairness
+1> TPC-B: 7 iter -16 diff 1937 (1908) tps 516 avg micros 192655 max micros 1.0 unfairness
+1> TPC-B: 8 iter -14 diff 1923 (1897) tps 520 avg micros 9156 max micros 1.0 unfairness
+1> TPC-B: 9 iter +3 diff 1926 (1897) tps 519 avg micros 45767 max micros 1.0 unfairness
+1> TPC-B: 10 iter -3 diff 1923 (1893) tps 520 avg micros 131115 max micros 1.0 unfairness
+1> TPC-B: 11 iter +7 diff 1930 (1901) tps 518 avg micros 128935 max micros 1.0 unfairness
+1> TPC-B: 12 iter -11 diff 1919 (1890) tps 521 avg micros 80949 max micros 1.0 unfairness
+1> 
+=ERROR REPORT==== 21-May-2009::21:02:11 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::21:02:13 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::21:02:13 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::21:02:14 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> 
+=ERROR REPORT==== 21-May-2009::21:02:15 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> TPC-B: 13 iter 0 diff 1919 (1890) tps 521 avg micros 37398 max micros 1.0 unfairness
+1> 
+=ERROR REPORT==== 21-May-2009::21:02:53 ===
+Mnesia(nonode@nohost): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+1> TPC-B: 14 iter +4 diff 1923 (1893) tps 520 avg micros 30535 max micros 1.0 unfairness
+1> TPC-B: Driver 1 (<0.497.0>) on node nonode@nohost stopped: {time,1701802,1597990,1597990,882544437,379506}
+1> TPC-B: 14 iter -11 diff 1912 (1883) tps 523 avg micros 306324 max micros 1.0 unfairness
+1> TPC-B: 1930 (1901) transactions per second, duration of longest transaction was 379 milliseconds
+1> TPC-B: Verifying tables: [branch,teller,account,history]
+1> TPC-B:  .. Done loading tables: [branch,teller,account,history]
+1> TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+1> DONE1> Time for teller1> DONE1> Time for account1> DONE1> 
