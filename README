@@ -1,0 +1,42 @@
+
+Simple benchmarking for tcerl. This is a benchmarking library that is a part 
+of mnesia/Examples, made by Ericsson/hakan@erix.ericsson.se. Tpc has said 
+that TPC-B is obsolote but for simple measuring it is enough.
+http://www.tpc.org/tpcb/
+
+You can check the documentation in mnesia_tpcb.erl for further help.
+
+You need:
+--------
+*tcerl
+http://code.google.com/p/tcerl
+
+* Mnesiaex
+http://code.google.com/p/mnesiaex
+
+* Tokyo Cabinet
+http://sourceforge.net/projects/tokyocabinet/
+http://tokyocabinet.sourceforge.net/
+
+
+
+Quick start:
+------------
+
+open an erlang shell:
+
+erl -sname bench
+Erlang (BEAM) emulator version 5.6.5 [source] [64-bit] [smp:4] [async-threads:0] [hipe] [kernel-poll:false]
+
+Eshell V5.6.5  (abort with ^G)
+(bench@sillhaj)1> mnesia_tpcb:start().
+...
+
+
+
+or
+(bench@sillhaj)1> mnesia_tpcb:start([{stop_after, timer:minutes(240)}]).
+
+
+You can specify tcerl specific configuration parameters for the tables
+account and history (since the others are so small)in tc.conf
