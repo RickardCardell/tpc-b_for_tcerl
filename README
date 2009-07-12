@@ -4,7 +4,8 @@ of mnesia/Examples, made by Ericsson/hakan@erix.ericsson.se. Tpc has said
 that TPC-B is obsolote but for simple measuring it is enough.
 http://www.tpc.org/tpcb/
 
-You can check the documentation in mnesia_tpcb.erl for further help.
+You can check the documentation in mnesia_tpcb.erl for further help and
+documentation.
 
 You need:
 --------
@@ -40,3 +41,112 @@ or
 
 You can specify tcerl specific configuration parameters for the tables
 account and history (since the others are so small)in tc.conf
+
+
+
+
+Example of a run
+----------------------------------------------------
+
+Erlang (BEAM) emulator version 5.6.5 [source] [64-bit] [smp:4] [async-threads:0] [hipe] [kernel-poll:false]
+
+Eshell V5.6.5  (abort with ^G)
+(bench@sillhaj)1> mnesia_tpcb:start().
+TPC-B: Table config: [{db_nodes,[bench@sillhaj]},
+                      {n_replicas,1},
+                      {replica_nodes,[bench@sillhaj]},
+                      {replica_type,external_copies},
+                      {use_running_mnesia,false},
+                      {n_fragments,0},
+                      {n_branches,1},
+                      {n_tellers_per_branch,10},
+                      {n_accounts_per_branch,100000},
+                      {branch_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"},
+                      {account_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"},
+                      {teller_filler,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPPQRSTUVWXYZa"}]
+TPC-B: Generating 1 branches a 119 bytes
+TPC-B: Generating 1 * 10 tellers a 121 bytes
+TPC-B: Generating 1 * 100000 accounts a 122 bytes
+TPC-B: Generating 0 history records a 51 bytes
+
+=ERROR REPORT==== 12-Jul-2009::21:32:32 ===
+Mnesia(bench@sillhaj): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+
+=ERROR REPORT==== 12-Jul-2009::21:32:35 ===
+Mnesia(bench@sillhaj): ** WARNING ** Mnesia is overloaded: {dump_log,
+                                                            write_threshold}
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+TPC-B: Run config: [{driver_nodes,[bench@sillhaj]},
+                    {n_drivers_per_node,1},
+                    {use_running_mnesia,false},
+                    {stop_after,900000},
+                    {report_interval,60000},
+                    {use_sticky_locks,false},
+                    {spawn_near_branch,false},
+                    {activity_type,transaction},
+                    {reuse_history_id,false}]
+Tokyocabinet cfg:
+ branch: [{type,{external,ordered_set,tcbdbtab}},
+          {user_properties,[{deflate,true},
+                            {async_write,false},
+                            {bucket_array_size,2},
+                            {bloom,128,7}]}]
+ teller: [{type,{external,ordered_set,tcbdbtab}},
+          {user_properties,[{deflate,true},
+                            {async_write,false},
+                            {bucket_array_size,20},
+                            {bloom,128,7}]}]
+ account: [{type,{external,ordered_set,tcbdbtab}},
+           {user_properties,[{deflate,true},
+                             {async_write,false},
+                             {bucket_array_size,200000},
+                             {bloom,781,7},
+                             {leaf_node_cache,50000},
+                             {deflate,true}]}]
+ history: [{type,{external,ordered_set,tcbdbtab}},
+           {user_properties,[{deflate,true},
+                             {async_write,false},
+                             {bucket_array_size,10000},
+                             {bloom,131072,7},
+                             {leaf_node_cache,50000},
+                             {deflate,true}]}]
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+TPC-B: Orphan branches: []
+TPC-B: Driver 1 started as <0.619.0> on node bench@sillhaj with 1 local branches
+TPC-B: 1 iter 0 diff 2352 (2314) tps 425 avg micros 14756 max micros 1.0 unfairness
+TPC-B: 2 iter 0 diff 2352 (2314) tps 425 avg micros 14432 max micros 1.0 unfairness
+TPC-B: 3 iter +6 diff 2358 (2320) tps 424 avg micros 11467 max micros 1.0 unfairness
+TPC-B: 4 iter -6 diff 2352 (2314) tps 425 avg micros 11721 max micros 1.0 unfairness
+TPC-B: 5 iter 0 diff 2352 (2314) tps 425 avg micros 10923 max micros 1.0 unfairness
+TPC-B: 6 iter 0 diff 2352 (2309) tps 425 avg micros 9745 max micros 1.0 unfairness
+TPC-B: 7 iter +6 diff 2358 (2314) tps 424 avg micros 10485 max micros 1.0 unfairness
+TPC-B: 8 iter 0 diff 2358 (2320) tps 424 avg micros 9211 max micros 1.0 unfairness
+TPC-B: 9 iter +6 diff 2364 (2325) tps 423 avg micros 9203 max micros 1.0 unfairness
+TPC-B: 10 iter -12 diff 2352 (2314) tps 425 avg micros 12241 max micros 1.0 unfairness
+TPC-B: 11 iter +6 diff 2358 (2314) tps 424 avg micros 13973 max micros 1.0 unfairness
+TPC-B: 12 iter -6 diff 2352 (2314) tps 425 avg micros 8793 max micros 1.0 unfairness
+TPC-B: 13 iter 0 diff 2352 (2314) tps 425 avg micros 7184 max micros 1.0 unfairness
+TPC-B: 14 iter 0 diff 2352 (2309) tps 425 avg micros 14228 max micros 1.0 unfairness
+TPC-B: Driver 1 (<0.619.0>) on node bench@sillhaj stopped: {time,2071952,1942828,1942828,880790661,14756}
+TPC-B: 14 iter -5 diff 2347 (2309) tps 426 avg micros 11530 max micros 1.0 unfairness
+TPC-B: 2352 (2314) transactions per second, duration of longest transaction was 14 milliseconds
+TPC-B: Verifying tables: [branch,teller,account,history]
+TPC-B:  .. Done loading tables: [branch,teller,account,history]
+TPC-B: Continuing to Verifying tables: [branch,teller,account,history]
+
+=INFO REPORT==== 12-Jul-2009::21:47:43 ===
+    application: mnesia
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 12-Jul-2009::21:47:49 ===
+    application: tcerl
+    exited: stopped
+    type: temporary
+
+
