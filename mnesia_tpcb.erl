@@ -165,8 +165,8 @@
 
 -define(tc_cfg_history, [  { deflate, true },
                             { async_write, false },
-                            { bucket_array_size, 100000}, 
-                            { bloom, 2 bsl 32, 7 }]).
+                            { bucket_array_size, 10000}, 
+                            { bloom, 2 bsl 16, 7 }]).
 
 -define(tc_cfg_account,  [  { deflate, true },
                             { async_write, false },
@@ -204,11 +204,11 @@
 		       branch -> ?tc_cfg_branch;
 		       account ->
 			   ?tc_cfg_account++Extra;
-		       tc_cfg_history -> 
-			   ?tc_cfg_history ++ Extra;
+		       history -> 
+			   ?tc_cfg_history++Extra;
 		       _ -> ?tc_cfg_default
 		   end 
-	       end
+	       
 	       end}]
 	end).
 
@@ -623,12 +623,7 @@ create_tab(TC, Name, Attrs, _ForeignKey) when TC#tab_config.n_fragments =:= 0 ->
     Nodes = TC#tab_config.replica_nodes,
     Type = TC#tab_config.replica_type,
     Def = [{Type, Nodes}, {attributes, Attrs}],
-    Def_new = Def++ if
-			(is_tuple(Type) andalso element(1,Type) == 
-			 external_copies)  orelse
-			Type == external_copies	-> ?get_tc_cfg(Name);
-			true -> []
-		    end,
+    Def_new = Def++  ?get_tc_cfg(Name),		
     create_tab(Name, Def_new);
 create_tab(TC, Name, Attrs, ForeignKey) ->
     NReplicas = TC#tab_config.n_replicas,
