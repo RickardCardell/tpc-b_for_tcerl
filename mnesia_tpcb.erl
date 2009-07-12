@@ -190,31 +190,27 @@
                             { async_write, false },
                             { bucket_array_size, 50000}, 
                             { bloom, 2 bsl 16, 7 }]).
--define(tc_cfg_standard,[{ deflate, true }, { bucket_array_size, 10000 }]).
 
--define(tc_standard,false).
--define(get_tc_cfg(Name), begin 
-			     
-				[{ type, { external, ordered_set, tcbdbtab }},
-                            { user_properties, 
-			      
-			      begin 
-				  Extra = read_tc_conf(),
-				  case ?tc_standard of
-				      true ->  ?tc_cfg_standard;
-				      _ -> 
-					  case Name of 
-					      teller -> ?tc_cfg_teller;
-					      branch -> ?tc_cfg_branch;
-					      account ->
-						  ?tc_cfg_account++Extra;
-					      tc_cfg_history -> 
-						  ?tc_cfg_history ++ Extra;
-					      _ -> ?tc_cfg_default
-					  end 
-				  end
-			      end}]
-			  end).
+-define(tc_cfg_standard,[{ deflate, true }, { bucket_array_size, 10000 }]).
+-define(get_tc_cfg(Name), 
+	begin			      
+	    [{ type, { external, ordered_set, tcbdbtab }},
+	     { user_properties, 
+	       
+	       begin 
+		   Extra = read_tc_conf(),
+		   case Name of 
+		       teller -> ?tc_cfg_teller;
+		       branch -> ?tc_cfg_branch;
+		       account ->
+			   ?tc_cfg_account++Extra;
+		       tc_cfg_history -> 
+			   ?tc_cfg_history ++ Extra;
+		       _ -> ?tc_cfg_default
+		   end 
+	       end
+	       end}]
+	end).
 
 
 -define(n_accounts_per_branch, 100000). %%Must be 100000
