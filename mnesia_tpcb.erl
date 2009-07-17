@@ -96,7 +96,9 @@
 	 replica_test/1,
 	 sticky_replica_test/1,
 	 remote_test/1,
-	 remote_frag2_test/1
+	 remote_frag2_test/1,
+	read_tc_conf/0 ,
+	handle_options/2
 	]).
 
 -define(SECOND, 1000000).
@@ -192,25 +194,7 @@
                             { bloom, 2 bsl 16, 7 }]).
 
 -define(tc_cfg_standard,[{ deflate, true }, { bucket_array_size, 10000 }]).
--define(get_tc_cfg(Name), 
-	begin			      
-	    [{ type, { external, ordered_set, tcbdbtab }},
-	     { user_properties, 
-	       
-	       begin 
-		   Extra = read_tc_conf(),
-		   case Name of 
-		       teller -> ?tc_cfg_teller;
-		       branch -> ?tc_cfg_branch;
-		       account ->
-			   ?tc_cfg_account++Extra;
-		       history -> 
-			   ?tc_cfg_history++Extra;
-		       _ -> ?tc_cfg_default
-		   end 
-	       
-	       end}]
-	end).
+
 
 
 -define(n_accounts_per_branch, 100000). %%Must be 100000
@@ -623,7 +607,7 @@ create_tab(TC, Name, Attrs, _ForeignKey) when TC#tab_config.n_fragments =:= 0 ->
     Nodes = TC#tab_config.replica_nodes,
     Type = TC#tab_config.replica_type,
     Def = [{Type, Nodes}, {attributes, Attrs}],
-    Def_new = Def++  ?get_tc_cfg(Name),		
+    Def_new = Def++  get_tc_cfg(Name),		
     create_tab(Name, Def_new);
 create_tab(TC, Name, Attrs, ForeignKey) ->
     NReplicas = TC#tab_config.n_replicas,
@@ -640,7 +624,7 @@ create_tab(TC, Name, Attrs, ForeignKey) ->
     Def_new = Def++ if
 			(is_tuple(Type) andalso element(1,Type) == 
 			 external_copies)  orelse
-			Type == external_copies	-> ?get_tc_cfg(Name);
+			Type == external_copies	-> get_tc_cfg(Name);
 			true -> []
 		    end,
     
@@ -755,10 +739,10 @@ run(Args) ->
     {List, _} = lists:mapfoldl(Fun, 2, Tags),
     io:format("TPC-B: Run config: ~p ~n", [List]),
     io:format("Tokyocabinet cfg: ~n branch: ~p ~n teller: ~p ~n account: ~p ~n history: ~p ~n",[
-												?get_tc_cfg(branch),
-												?get_tc_cfg(teller), 
-												?get_tc_cfg(account),
-												?get_tc_cfg(history)]),
+												get_tc_cfg(branch),
+												get_tc_cfg(teller), 
+												get_tc_cfg(account),
+												get_tc_cfg(history)]),
 
     Pid = spawn_link(?MODULE, reporter_init, [self(), RunConfig]),
     receive
@@ -1377,6 +1361,48 @@ check_balance(_, BadNodes) ->
 	true -> exit(Msg);
 	_ -> mnesia:abort(Msg)
     end.
+
+
+
+
+
+
+
+
+
+
+get_tc_cfg(Name) ->
+	
+	     
+	       Props = 
+   		begin   
+		Extra = read_tc_conf(),
+		   Extra1 = case proplists:lookup(Name, Extra) of
+				none -> []; 
+	   			{Name, E} -> E
+			  end,
+                  
+                   Options = case Name of 
+		       teller -> ?tc_cfg_teller;
+		       branch -> ?tc_cfg_branch;
+		       account ->
+			   ?tc_cfg_account;
+		       history -> 
+			   ?tc_cfg_history;
+		       _ -> ?tc_cfg_default
+		   end
+		end,
+
+		   handle_options(Extra1, Options),
+	[{ type, { external, ordered_set, tcbdbtab }},
+	     { user_properties,  Props}].
+	     
+
+
+
+
+
+
 read_tc_conf() ->
     FName = "tc.conf",
     case file:consult(FName) of
@@ -1388,3 +1414,17 @@ read_tc_conf() ->
 	{ok, L} ->
 	    L
     end.
+
+
+
+handle_options([],DefaultOpts) -> DefaultOpts;
+handle_options([ H |T], DefaultOpts) ->
+ 	K = element(1,H),    
+	DO = case lists:keymember(K,1, DefaultOpts) of
+	   false ->   [H|DefaultOpts];
+   	   _ ->
+		 lists:keyreplace(K, 1, DefaultOpts, H)
+	 end,
+    handle_options(T, DO).
+
+
